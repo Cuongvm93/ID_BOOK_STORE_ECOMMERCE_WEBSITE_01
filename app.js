@@ -1,3 +1,4 @@
+const {ResetProd}=require('./model/product')
 const express=require('express')
 const cookieSession = require("cookie-session");
 const app=express()
@@ -12,7 +13,7 @@ const routerProd=require('./routes/product.routes')
 const routerCate=require('./routes/cate.routes')
 const routerReview=require('./routes/review.routes')
 const routerNews=require ('./routes/news.routes')
-const routerOrderDetail=require('./routes/news.routes')
+const routerOrderDetail=require('./routes/order_detail')
 const morgan=require('morgan')
 const dotenv=require('dotenv')
 const passportSetup = require("./passport");

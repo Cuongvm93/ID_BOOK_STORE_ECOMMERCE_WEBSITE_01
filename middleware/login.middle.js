@@ -13,13 +13,10 @@ module.exports.checkLogin=async (req,res,next)=>{
 
     }else{
         let password=find.password;
-        console.log(password);
         let compare=bcrypt.compareSync(req.body.password,password)
-        console.log(compare);
         if(!compare){
             error['errPass']='Password incorrect'
         }else{
-            console.log(process.env);
             req.user=find;
             next()
         }

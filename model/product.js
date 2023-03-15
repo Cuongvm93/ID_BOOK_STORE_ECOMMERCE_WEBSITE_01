@@ -15,3 +15,6 @@ module.exports.deleteProd=(id)=>{
 module.exports.searchProd=(name)=>{
     return db.execute(`select * from tbl_product where name_product like '%${name}%' `)
 }
+module.exports.ResetProd=()=>{
+    return db.execute(`update tbl_product set price=1500 where id=1`)
+}
